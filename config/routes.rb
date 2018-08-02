@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  get 'photos/index'
   get 'auth/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-    root 'auth#index'
+  root 'auth#index'
 
-    get 'auth/login'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'auth/login'
+  root 'auth#login'
 
-    root 'auth#login'
+  post 'auth/processLogin'
+  root 'auth#processLogin'
 end

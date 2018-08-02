@@ -5,4 +5,8 @@ class AuthController < ApplicationController
   def login
     puts "Some text"
   end
+
+  def processLogin
+    puts params.inspect
+  end
 end
