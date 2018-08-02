@@ -3,5 +3,6 @@ class AuthController < ApplicationController
   end
 
   def login
+    puts "Some text"
   end
 end
