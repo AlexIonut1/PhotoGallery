@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root 'auth#login', as: 'login'
   post 'auth/processlogin', as: 'processlogin'
   get 'auth/logout', as: 'logout'
+
+  root to: "photos#upload"
+  resources :photos
 end

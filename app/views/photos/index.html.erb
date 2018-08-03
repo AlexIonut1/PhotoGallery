@@ -9,6 +9,6 @@
 
 <ul>
   <% @photos.each do |element| %>
-    <li><%= image_tag(element.title, :alt => "rss feed") %></li>
+    <li><%= image_tag(element.image_file_name, :alt => "rss feed") %></li>
   <% end %>
 </ul>
