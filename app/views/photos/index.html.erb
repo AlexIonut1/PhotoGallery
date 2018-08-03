@@ -7,6 +7,8 @@
   <a href="/auth/login">Login</a>
 <% end %>
 
+<a href="/photos/upload">Upload more photos</a>
+
 <ul>
   <% @photos.each do |element| %>
     <li><%= image_tag(element.image_file_name, :alt => "rss feed") %></li>

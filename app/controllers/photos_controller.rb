@@ -37,7 +37,7 @@ class PhotosController < ApplicationController
     @photo.user_id = session[:user_id]
     if @photo.save
       flash[:notice] = "Successfully added new photo!"
-      redirect_to root_path
+      redirect_to photos_index_url
     else
       flash[:alert] = "Error adding new photo!"
       render :new
