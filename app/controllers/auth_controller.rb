@@ -5,7 +5,7 @@ class AuthController < ApplicationController
     puts "Some text"
   end
 
-  def newlogin
+  def processlogin
     #check if a user with the given email exists
     @user = User.where("email = ? and password = ?", params[:user][:email], params[:user][:password]).first
 
@@ -15,6 +15,14 @@ class AuthController < ApplicationController
     end
 
     @email = params[:user][:email]
+    session[:user_id] = @user.id
+  end
 
+  def logout
+    reset_session
+
+    redirect_to login_url
+
+    return
   end
 end
